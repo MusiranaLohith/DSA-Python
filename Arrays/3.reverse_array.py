@@ -5,8 +5,10 @@ for i in range(0,n):
     arr.append(m)
 print(arr)
 
-for i in range(len(arr)):
-    first = arr[i]
-    second = arr[n-1]
-
+reverse = n-1
+for i in range(n // 2):
+    temp = arr[i]
+    arr[i] = arr[reverse]
+    arr[reverse] = temp
+    reverse -= 1
 print(arr)
